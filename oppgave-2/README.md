@@ -289,8 +289,6 @@ jobs:
 
 Commit og push endringen din til Github, og du skal se følgende output nederst på workflow-siden din. Dette er applikasjonen vår som har blitt bygget og er klar til å deployes.
 
-![Artifact example](./images/actions-artifact.png).
-
 ---
 
 I denne oppgaven har vi laget en fullstendig CI-pipeline. I neste oppgave skal vi lage opplegg for deploy av koden til Github Pages.
