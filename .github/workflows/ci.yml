@@ -1,13 +1,13 @@
 name: Build
-
-on: [push]
-
+on:
+  push:
+    branches:
+      - '**'
+    tags-ignore:
+      - '**'
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      pages: write
     defaults:
       run:
         working-directory: ./code
@@ -21,10 +21,3 @@ jobs:
       - run: npm run build
       - run: npm run lint
       - run: npm test
-      - name: Upload static files as artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: code/dist
-      - name: Deploy to Github Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
